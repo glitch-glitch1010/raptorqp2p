@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaptorQP2P UI</title>
+</head>
+<body>
+  <h1>RaptorQP2P Web Interface</h1>
+
+  <h2>Seed a File</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="mode" value="seed">
+    <label for="file">Choose file to seed:</label>
+    <input type="file" name="file" id="file" required>
+    <button type="submit">Seed</button>
+  </form>
+
+  <hr>
+
+  <h2>Leech a Torrent</h2>
+  <form method="post">
+    <input type="hidden" name="mode" value="leech">
+    <label for="torrent">Torrent file path or URL:</label>
+    <input type="text" name="torrent" id="torrent" placeholder="e.g. out.torrent" required>
+    <button type="submit">Leech</button>
+  </form>
+
+  <hr>
+
+  <p>Once you seed or leech, check your terminal logs to follow progress.</p>
+</body>
+</html>
